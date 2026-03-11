@@ -1,4 +1,4 @@
-import { Dish, DayMenu, Settings, IngredientSummary, IngredientCategory } from '../types';
+import { Dish, DayMenu, Settings, IngredientSummary } from '../types';
 
 // Helper to round up to nearest 50
 export const roundTo50 = (num: number): number => {
@@ -30,9 +30,6 @@ export const calculateDailyIngredients = (
   // Avoid division by zero
   const veggieUnitWeight = veggieCount > 0 ? dailyVeggieTarget / veggieCount : 0;
   const meatUnitWeight = meatCount > 0 ? dailyMeatTarget / meatCount : 0;
-
-  // 5. Map to summaries
-  const summaries: IngredientSummary[] = [];
 
   // Helper map to merge same ingredients within a day
   const map = new Map<string, IngredientSummary>();

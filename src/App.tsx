@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Dish, DayMenu, Settings } from './types';
 import { INITIAL_DISHES } from './lib/initialData';
 import { getRandomDish, generateShoppingList } from './lib/logic';
